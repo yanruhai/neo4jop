@@ -60,8 +60,8 @@ def generate_neomodel_models(uri, auth):
     return "\n".join(lines)
 
 # --- 使用示例 ---
-code = generate_neomodel_models("bolt://localhost:7687", ("neo4j", "05546644556"))
-output_path = Path("./model/models.py")
+code = generate_neomodel_models("bolt://localhost:7687", ("neo4j", "cloudtian101"))
+output_path = Path("model/models.py")
 output_path.parent.mkdir(parents=True, exist_ok=True)
 output_path.write_text(code, encoding="utf-8")
 print(f"成功导出 neomodel 模型至: {output_path.resolve()}")
